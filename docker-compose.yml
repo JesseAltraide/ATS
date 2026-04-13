@@ -9,6 +9,7 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/ATS
       SPRING_DATASOURCE_USERNAME: user
       SPRING_DATASOURCE_PASSWORD: 1234
+      JWT_SECRET: super-long-256-bit-secret-key-that-never-changes-123456
     depends_on:
       - postgres
 

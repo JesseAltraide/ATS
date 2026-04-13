@@ -25,10 +25,10 @@ public class JwtService {
     @Autowired
     UserRepo userRepo;
 
-//    @Value("${jwt.secret}")
-    private String secret = "";
+    @Value("${jwt.secret}")
+    private String secret;
 
-    public JwtService(){
+   /* public JwtService(){
         try {
             KeyGenerator keyGenerator = KeyGenerator.getInstance("HmacSHA256");
             SecretKey secretKey = keyGenerator.generateKey();
@@ -36,7 +36,7 @@ public class JwtService {
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
-    }
+    }*/
 
     public String generateToken(String username, String role) {
         Map<String, Object> claims = new HashMap<String, Object>();
